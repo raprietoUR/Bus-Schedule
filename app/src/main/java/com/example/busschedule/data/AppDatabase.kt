@@ -37,8 +37,6 @@ abstract class AppDatabase: RoomDatabase() {
                     "app_database"
                 )
                     .createFromAsset("database/bus_schedule.db")
-                    // Wipes and rebuilds instead of migrating if no Migration object.
-                    // Migration is not part of this codelab.
                     .fallbackToDestructiveMigration()
                     .build()
                     .also {
